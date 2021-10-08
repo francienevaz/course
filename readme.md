@@ -1,2 +1,1 @@
-Olá esse progeto ensina você a usar o Git.
-Essa é uma Alteração
+Olá aqui vou iniciar os  meus projetos  do curso Programador BR.
