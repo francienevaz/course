@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/css-básico/basic.style.css">
     <title>HTML-básico</title>
 </head>
 <body>
-    <h1>Tags de formatação</h1>
-    <p>Esse é um <b>texto em negrito</b></p>
+    
+    <h1>Tags de formatação e estilização com CSS</h1>
+    <p id="main-text">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing."
+    </p>
+    
+    <p class="text-green">Esse é um <b>texto em negrito</b></p>
     <!--O padrão hoje em dia é usar a tag Strong-->
     <p>Esse é um <strong>texto em negrito</strong> </p>
     <p>Esse é um <em>texto em itálico</em> </p>
@@ -26,14 +32,14 @@
 
     <!--Trabalhando com imagens-->
     <!--Linkando diretamente com uma imagem da web-->
-    <img src="https://www.nasa.gov/sites/default/files/styles/ubernode_alt_horiz/public/thumbnails/image/simulated_bh.jpg" alt="black hole">
+    <img class="galery" src="https://www.nasa.gov/sites/default/files/styles/ubernode_alt_horiz/public/thumbnails/image/simulated_bh.jpg" alt="black hole" height="200">
 
     <!--Imagens salvas no PC-->
-    <img src="/html/html-básico/img/blackHole.jfif" alt="black hole" height="200">
+    <img class="galery" src="/html/html-básico/img/blackHole.jfif" alt="black hole" height="200">
 
     <!--Imagem que redireciona ao clicar-->
     <a href="https://blenderartists.org/t/interstellar-black-hole-gargantua/627437">
-        <img src="/html/html-básico/img/blackHole2.jfif" alt="black hole" height="200">
+        <img class="galery"  src="/html/html-básico/img/blackHole2.jfif" alt="black hole" height="200">
     </a>
 
     <!--Criando Listas

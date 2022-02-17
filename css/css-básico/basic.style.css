@@ -1,0 +1,18 @@
+/* o id serve pra identificar um único elemento*/
+body {
+    color: rgb(255, 255, 255);
+    background-image: url(../../html/html-básico/img/aurora1.jpg);
+    background-size: contain;   
+    background-attachment: fixed;   
+}
+#main-text {
+    color: blueviolet;
+    
+    background-image: url(../../html/html-básico/img/universe.jfif);
+}
+
+/* a classe pode-se usar em mais de um elemento. */
+
+.text-green {
+    color: rgb(63, 216, 63)
+}
