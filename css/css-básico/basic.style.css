@@ -5,10 +5,21 @@ body {
     background-size: contain;   
     background-attachment: fixed;   
 }
+/* para tirar a linha em baixo do link */
+a {
+    text-decoration: none;
+}
 #main-text {
-    color: blueviolet;
-    
-    background-image: url(../../html/html-básico/img/universe.jfif);
+    color: white;
+    text-align: justify;
+    text-indent: 20px;  
+    letter-spacing: 2px;  
+    line-height: 2;
+    word-spacing: 3px;
+    text-shadow: 2px 2px 5px black;
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/ubernode_alt_horiz/public/thumbnails/image/simulated_bh.jpg");
+    background-size: 100%;
+    padding: 30px;
 }
 
 /* a classe pode-se usar em mais de um elemento. */
@@ -16,3 +27,53 @@ body {
 .text-green {
     color: rgb(63, 216, 63)
 }
+
+.tabela {
+   padding:50px;
+}
+
+/* Unidades de medidas fixas */
+
+#cm {
+    background-color: rgb(224, 13, 13);
+    width: 1cm;
+    height: 1cm;
+}
+#mm {
+    background-color: white;
+    width: 1mm;
+    height: 1mm;
+}
+#in {
+    background-color: rgb(15, 55, 231);
+    width: 1in;
+    height: 1in;
+}
+#px {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+}
+#pt {
+    background-color: rgb(184, 16, 16);
+    width: 10pt;
+    height: 10pt;
+}
+#pc {
+    background-color: rgb(60, 230, 18);
+    width: 1pc;
+    height: 1pc;
+}
+
+/* Estilos de bordas*/
+
+.borda {
+    border-width: 5px;
+    border-color: white;
+}
+
+.dotted {border-style: dotted;}
+.dashed {border-style: dashed;}
+.solid {border-style: solid;}
+.none {border-style: none;}
+.hidden {border-style: hidden;}
