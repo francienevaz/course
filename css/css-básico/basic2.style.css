@@ -1,0 +1,23 @@
+.links{
+    text-decoration: none;
+    color: #a52a2a;    
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #a52a2a;
+    border-radius: 8px;
+}
+/* para mostrar que um link foi clicado, em frente do seletor links coloque :link, dá um efeito padrão e o link mudar a cor para um roxinho
+.links:link {
+}
+ */
+ /* nesse exemplo abaixo dá pra usar o hover ou active para configurar o link, o active vai funcionar quando a pessoa clicar no link */
+ .links:active {
+    background-color: #a52a2a;
+    color: #faebd7;
+}
+/* para configurar o link depois que ele foi visitado */
+/* .links:visited {
+    color: #0b59eb;
+} */
+
