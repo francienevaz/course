@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&family=Source+Code+Pro:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(rgba(6, 154, 196, 0.521), rgba(0,0,0,.50)100%), url(./img/code.png);
+    background-size: 400px;
+    max-width: 400px;
+    margin: auto;
+    width: 100%;
+    min-width: 200px; 
+    margin: 250px;
+    padding: 10px;
+    height: 200px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.logo {
+    padding: 4px;
+}
+
+
