@@ -4,16 +4,23 @@
     padding: 0;
 }
 
+.name {
+    font-family: 'Righteous', cursive;
+    letter-spacing: 5px;
+}
+
+.work {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .main {
     display: flex;
     flex-direction: column;
     color: rgb(255, 255, 255);
     background: linear-gradient(rgba(6, 154, 196, 0.521), rgba(0,0,0,.50)100%), url(./img/code.png);
-    background-size: 400px;
-    max-width: 400px;
-    margin: auto;
-    width: 100%;
-    min-width: 200px; 
+    background-size: 400px; 
     margin: 250px;
     padding: 10px;
     height: 200px;
@@ -23,7 +30,7 @@
 }
 
 .logo {
-    padding: 4px;
+    padding: 3.5px;
 }
 
 
