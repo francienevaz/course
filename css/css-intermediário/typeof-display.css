@@ -1,0 +1,31 @@
+body {
+    font-size: 1.2rem;
+}
+
+.div-dentro {
+    background-color: red;
+    width: 500px;
+    height: 50px;
+}
+
+/* Quando temos um elemento que é diplay inline, não dá para modificar a altura nem a largura desse elemento, a não ser que você o modifique para o display: inline-block */
+span {
+    background-color: green;
+    width: 500px;
+    display: inline-block;
+}
+
+/* Nunca podemos usar um elemento do tipo block dentro de um parágrafo por que ele quebra, o exemplo dado foi colocar uma div dentro de um parágrafo, e outro exemplo seria um parágrafo dentro de um parágrafo*/
+
+p {
+    margin: 0;
+}
+
+/* O display none faz com que pareça que o elemento nunca tenha sido colocado na tela  */
+.images {
+    height: 200px;
+    display: none;
+}
+
+/* Se você quiser fazer com que pareça que há uma imagem mas sem mostrá-la use:
+visibility: hidden */
