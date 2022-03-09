@@ -4,27 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Position - Absolute</title>
+    <title>Position - Fixed</title>
     <style>
-        /* A posição absoluta basicamente funciona independente das posições de outros elementos, podendo 
-        sobrepôr esses elementos, desde que o elemento pai não tenha uma posição estática/padrão, senão ela vai procurar um 'avô' por exemplo e ser relativa a ele */
+        
         .squad {
             width: 100px;
             height: 100px;
         }
-        /* Usando o position-relative dá pra sobrepor um squad do outro, se trocasse pela margin ela faria o squad 'descer' a quantidade de pixels que fosse colocada por exemplo */
         .squad-red {
                      
             background-color: red;
         }
-        /* O position absolute ele é relativo ao pai, desde que o pai não tenha um posicionamento estático, nesse caso abaixo ele está relativo ao body, pra mudar isso é só mudar a position da box que é o pai do squad, colocando ela em position: relative*/
+        /* Na position fixed o elemento fica fixado na posição. É relativo a sua view port/ janela */
         .squad-blue {
-            position: absolute;
-            right: 0px;    
-            bottom: 0px;     
+            position: fixed;
+            right: 0px;     
             background-color: blue;
         }
-        /* Position static é o padrão */
         .squad-green {
             background-color: green;
         }
@@ -32,7 +28,7 @@
         .box {
             position: relative;
             width: 500px;
-            height: 400px;
+            height: 4000px;
             border: 1px solid gray;
         }
 
@@ -41,8 +37,8 @@
 <body>
     <div class="box">
         <div class="squad squad-red"></div>
-        <div class="squad squad-blue"></div> <div class="squad squad-green"></div>
-        
+        <div class="squad squad-blue"></div> 
+        <div class="squad squad-green"></div>       
         
     </div>
     
