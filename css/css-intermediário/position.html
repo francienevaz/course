@@ -4,41 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Position - Fixed</title>
+    <title>Position - Sticky</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #EEE8E0;
+        }
         
         .squad {
             width: 100px;
             height: 100px;
         }
-        .squad-red {
+        .squad-dark-red {
                      
-            background-color: red;
+            background-color: #972424;
         }
-        /* Na position fixed o elemento fica fixado na posição. É relativo a sua view port/ janela */
-        .squad-blue {
-            position: fixed;
-            right: 0px;     
-            background-color: blue;
+        .squad-blue { 
+            position: sticky;
+            top: 0;
+            width: 100%;  
+            background-color: #151F7E;
         }
-        .squad-green {
-            background-color: green;
+        .squad-dark-blue {
+            background-color: #000317;
         }
-
-        .box {
-            position: relative;
-            width: 500px;
+        .squad-light-brown {
+            background-color: #973F24;
+        }
+        .squad-dark-orange {
+            background-color: #D03909;
+        } 
+         .box {
+            background-color: #533C3C;
+            width: 50%;
             height: 4000px;
-            border: 1px solid gray;
+            border: 1px solid #533C3C;
         }
 
     </style>
 </head>
 <body>
+    <div class="squad squad-blue"></div> 
     <div class="box">
-        <div class="squad squad-red"></div>
-        <div class="squad squad-blue"></div> 
-        <div class="squad squad-green"></div>       
+        
+        <div class="squad squad-dark-red"></div>        
+        <div class="squad squad-dark-blue"></div>
+        <div class="squad squad-light-brown"></div> 
+        <div class="squad squad-dark-orange"></div>       
         
     </div>
     
