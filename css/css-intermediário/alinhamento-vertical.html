@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style>
+        body {
+            font-size: 1.2rem;
+        }
+        .card {
+            position: relative;
+            float: left;
+            width: 400px;
+            height: 200px;
+            border: 2px solid purple;
+            text-align: center;
+
+        }
+        .card2 {
+            /* display: inline-block; para o padding para formatar o 'cartão' -nesse caso - tem que tirar o clear e o float  */
+            clear: left;
+            float: left;
+            border: 2px solid purple;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .c1 {
+            background-color: palevioletred;
+            line-height: 200px;
+        }
+        .c2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="c1">
+            Franciene Vaz
+        </div>
+    </div>
+    <div class="card">
+        <div class="c2">
+            Franciene Vaz
+        </div>
+    </div>
+    <div class="card2">
+        <div>
+            Franciene Vaz
+        </div>
+    </div>
+    
+</body>
+</html>
