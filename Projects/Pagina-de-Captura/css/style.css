@@ -3,10 +3,12 @@
     padding: 0;
 }
 body {
+    user-select: none;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
 }
 header {
+    /* user-select: none; */
     background-color: #48c5ce;
     text-align: center;
     color: #ffffff;
@@ -26,6 +28,7 @@ section {
     overflow: hidden;
 }
 .formContainer {
+    /* user-select: none; */
     max-width: 230px;
     background-color: #ffffffbb;
     padding: 20px;
@@ -68,6 +71,7 @@ footer {
 }
 
 .description {
+    /* user-select: none; */
     display: inline-block;
     text-align: left;
     color: white;
