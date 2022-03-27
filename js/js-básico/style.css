@@ -9,9 +9,11 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0px;
   background-color: #ffc400;
-  padding: 15px;
   font-family:'Palette Mosaic', cursive;
+  padding: 15px;
 }
 .main {
   font-family:'Satisfy', cursive;
