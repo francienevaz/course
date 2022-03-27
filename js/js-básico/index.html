@@ -20,9 +20,152 @@
                 alert('Hello World!');
             </code>
        </div>
-    
-    
-    </div>
+            <h2>Algorítmos</h2>
+            <p>É um passo a passo que você segue para alcançar determinado objetivo, é literalmente isso, o computador funciona a base de algorítmos. Se a gente quer que o computador execute uma função por exemplo, precisamos passar uma sequência lógica de comandos para que ele consiga executá-los. Precisa ser claro e muito detalhado para que não haja espaço para segundas interpretações. <br>
+            Suponhamos que você tenha que passar comandos de como preparar um café feito no coador para uma máquina, vamos definir um algorítimo para isso:
+                <ol class="code">
+                    <li>Verificar SE há pó de CAFÉ, SE SIM prossegue, SE NÂO mostrar uma mensagem
+                que não tem pó de café;</li>
+                    <li>Verificar SE tem Água (300ml), SE SIM prossegue, SE NÃO encher o recipiente
+                com ÁGUA (300ml);</li>
+                    <li>Verificar SE o fogo está aceso, SE SIM prossegue, SE NÃO acenda o 
+                fogo;</li>
+                    <li>Colocar o Recipiente com ÁGUA para esquentar;</li>
+                    <li>Colocar 3 colheres (sopa) rasa de pó de café no coador</li>
+                    <li>Verificar SE a Água está em ponto de ebulição (100°C), SE SIM jogue
+                a Água quente dentro do coador em cima do pó de CAFÉ,
+                SE NÃO espere até que a ÁGUA atinja 100°C.</li>
+                    <li>SE a caneca estiver vazia ENCHER com o CAFÉ</li>
+                    <li>SE estiver cheia, BEBA.</li>
+                </ol> 
+            Nessa sequência de comandos podemos ver que há uma flexibilidade em questão da ordem de alguns comandos, como por exemplo poderíamos colocar o CAFÉ no coador no começo, mas nem sempre mudar a ordem vai resultar no objetivo esperado, e na Programação a ordem importa. 
+            </p>
+            <p>
+                Dica para inserir comentários dentro do VSCode:
+                Aperte Ctrl + :/;
+            </p>
+             
+
+            <h2>Identificadores de Variáveis</h2>
+
+            <ul>
+                <li>Podem começar com letra, $ ou _</li>
+                <li>Não podem começar com números</li>
+                <li>É possível usar letras ou números</li>
+                <li>É possível usar acentos e símbolos</li>
+                <li>Não podem conter espaços</li>
+                <li>Não podem ser palavras reservadas</li>
+            </ul>
+
+            <h2>Tipos primitivos</h2>
+
+            <p>Um comando dentro do JS para saber o tipo de variável, se usa o typeof.</p>
+                <ul>
+                    <li>Number - Infinity, NaN </li>
+                    <li>String</li>
+                    <li>Boolean</li>
+                    <li>Null</li>
+                    <li>Undefined</li>  
+                    <li>Object - Array</li> 
+                    <li>Function</li>
+                </ul>
+            <h2>Manipulação de DADOS</h2>
+
+            <div class="code">
+                <code>
+                    var nome = window.prompt("What's your name"?) // para abrir uma janela de pergunta na web
+                    // a variável nome recebe o comando acima
+                    window.alert('É um grande prazer te conhecer' + nome + '!')
+                    // para usar a variável nome é necessário concatenar
+                </code>
+            </div>
+
+            <p>Para fazer soma entre as variáveis</p>
+
+            <div class="code">
+                <code>
+                    var n1 = window.prompt("Digite um número")
+                    var n2 = window.prompt("Digite outro número")
+                    var s = n1 + n2
+                    window.alert('A soma dos valores é:' + s)
+                </code>
+            </div>
+
+            <p>O sinal de + serve para concatenação, logo o resultado que será impresso caso 
+                coloquemos 1 + 3 = será 13. O comando do Prompt retorna 'string', para que os números sejam somados é preciso converter a string em number. Então o comando ficará assim
+            </p>
+
+            <div class="code">
+                <code>
+                    var n1 = Number.parseInt(window.prompt("Digite um número"))
+                    var n2 = Number.parseInt(window.prompt("Digite outro número"))
+                    var s = n1 + n2
+                    window.alert('A soma dos valores é:' + s)
+                    /* os comandos que podem ser usados: Number.parseInt() para números inteiros
+                    e Number.parseFloat() para números reais. E ainda nas versões mais atualizadas
+                    pode se usar só Number() que o JS já entende e faz a conversão independente se for
+                    inteiro ou real.*/
+                </code>
+            </div>
+
+           <p> Se for necessário a coversão de Número para String, podemos usar as duas formas:</p>
+
+            <div class="code">
+                <code>
+                    String(n) <br>
+                    n.toString()
+                    </code>
+            </div>
+
+            <p> Uma forma de fazer a junção das coisas ao invés de concatenar, podemos usar essa fórmula abaixo, até mesmo para deixar o código mais limpo:
+
+            </p>
+
+            <div class="code">
+                <code>
+                    var s = "JavaScript"
+                    "Eu estou aprendendo" + s // concatena s
+        
+                    var nome = 'Gustavo'
+                    var nota = 7,5
+                    var matéria = 'Geografia'
+                    `O aluno ${nome} tirou ${nota} em ${matéria}` // template string
+                </code>
+            </div>
+
+            <p> Outros formatos de string que podemos utilizar</p>
+
+            <div class="code">
+                <code>
+                    var s ='JavaScript'
+                    s.length // quantos caracteres a string tem
+                    s.toUpperCase() // transforma tudo em letras maiúsculas
+                    s.toLowerCase() // transforma tudo em letras minúsculas
+                </code>
+            </div>
+
+            <p> Para formatar números, trocar ponto por virgula, acrescentar casas decimais, pode se usar o código abaixo: </p>
+
+            <div class="code">
+                <code>
+                    var n1 = 1541.5
+                    n1.toFixed(2) //para fixar 2 casas decimais
+                    console.log(n1) 
+                    1541.50  // o que será impresso
+        
+                    n1.toFixed(2).replace(".",",") //para trocar ponto por virgula
+                    console.log(n1)
+                    1541,50
+        
+                    n1.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})
+                    // para converter para real, dolar entre outros.
+                    se trocar 'BRL' por 'USD' o cifrão aparece em dolar, se colocar 
+                    'EUR' imprime o euro. 
+                </code>
+            </div>        
+            
+
+        </div>
    </div>
     
 </body>

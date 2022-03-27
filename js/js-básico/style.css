@@ -24,11 +24,15 @@ body {
 }
 .code {
   margin: 10px;
-  max-width: 500px;
+  max-width: 100%;
   font-family: Consolas,"courier new";
   color: crimson;
   background-color: #f1f1f1;
   padding: 10px;
   font-size: 1.2rem;
   border-radius: 10px;
+  }
+  li {
+    list-style-type:square;
+    list-style-position: inside;
   }
