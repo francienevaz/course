@@ -17,7 +17,7 @@ body {
 }
 .main {
   font-family:'Satisfy', cursive;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   word-spacing: normal;
   max-width: 50%;
   margin: 20px;
@@ -37,4 +37,7 @@ body {
   li {
     list-style-type:square;
     list-style-position: inside;
+  }
+  img {
+    width: 100%;
   }
