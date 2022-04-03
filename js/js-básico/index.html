@@ -165,8 +165,30 @@
             </div>   
             <h2>Condicionais</h2> 
             <p>O conceito de Condicionais é bem simples de entender, se trata de comandos que serão executados 'se' algo acontecer ou 'se não' acontecer outros comandos podem ser executados, bem como o sentido da palavra.</p>
-            <img src="./img/if.webp" alt="ifStatements">    
-            
+            <img src="./img/if.webp" alt="ifStatements">
+            <h4>Exemplo:</h4>    
+            <p>Imagine que você vai desenvolver uma página de um site de bebidas alcólicas, no Brasil a faixa etária permitida para o consumo de bebidas alcólicas é acima de 18 anos. Logo se o consumidor for de menor, será necessário que você crie uma condição que não permita que o mesmo consiga comprar a bebida</p>
+            <h5>Digite a sua Idade:</h5>
+            <input type="number" id="idade" placeholder="idade">
+            <p id="result"></p>
+            <input type="button" value="Verificar" onclick="idade()">
+
+            <p>Nesse exemplo acima, usei uma condicional para verificar a idade de uma pessoa</p>
+            <h2>Operador Ternário</h2>
+            <p>O Operador Ternário é uma outra forma de codar uma condição, só que mais simplificado. Vamos ver na prática:</p>
+            <div class="code">
+                <code>
+                    var idade = 17;
+                    <br>
+                    function verificar() {
+                        <br>
+                        idade >= 18 ? console.log('Pode!') : console.log('Não pode!');
+                        <br>
+                    }
+                </code>
+            </div>
+
+
 
         </div>
    </div>
