@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Josefin+Sans&family=Palette+Mosaic&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&family=Sarala:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -12,11 +12,11 @@ body {
   position: sticky;
   top: 0px;
   background-color: #ffc400;
-  font-family:'Palette Mosaic', cursive;
+  font-family: 'Playfair Display', serif;
   padding: 15px;
 }
 .main {
-  font-family:'Satisfy', cursive;
+  font-family: 'Sarala', sans-serif;
   font-size: 1.2rem;
   word-spacing: normal;
   max-width: 50%;
