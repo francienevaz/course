@@ -6,6 +6,7 @@
 }
 body {
   background-color: #fcf7d0;
+  margin-bottom: 100px;
 }
 
 .header {
@@ -33,11 +34,20 @@ body {
   padding: 10px;
   font-size: 1rem;
   border-radius: 10px;
-  }
-  li {
-    list-style-type:square;
-    list-style-position: inside;
-  }
-  img {
-    width: 100%;
-  }
+}
+#copy {
+  position: relative;
+  float: right;
+  height: 18px;
+  width: 18px;
+}
+#copy:hover {
+  cursor: pointer;
+}
+ li {
+  list-style-type:square;
+  list-style-position: inside;
+}
+img {
+  width: 100%;
+}

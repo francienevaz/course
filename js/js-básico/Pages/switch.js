@@ -1,3 +1,5 @@
+// função que calcula a média de notas
+
 function consultar () {
     let nota1 = document.getElementById('nota1');
     let nota2 = document.getElementById('nota2');
@@ -12,7 +14,7 @@ function consultar () {
         conceito = "suficiente"
     } else if (media < 7) {
         conceito = "Insuficiente"
-    }
+    };
 
     switch (conceito) {
         case "Insuficiente":
@@ -24,5 +26,17 @@ function consultar () {
         default:
             res.innerHTML = 'Digite suas notas!';
             break;
-    } 
+    }; 
+};
+
+// função para copiar texto em tela
+
+function copyText () {
+    const copy = document.querySelector('#code');
+
+    navigator.clipboard.writeText(copy.value);
+
+    // Alert the copied text
+
+    alert('Copiou' + copy.value)
 }
