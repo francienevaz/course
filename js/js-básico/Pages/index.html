@@ -18,40 +18,42 @@
         <p>É uma forma de trabalhar com condições de forma estruturada e deixa o código mais 'clean' e de fácil compreensão. É utilizado quando o programa tem respostas diferentes para cada condição. Ele também tem um valor padrão em resposta quando nenhum dos resultados foi previsto.<br>
         Abaixo temos uma demostração de como usar em uma situação do dia a dia de uma escola por exemplo:</p>
         <div class="code">
-            <code id="code" type="text">
-                <button  id="copy" onclick="copyText()">
-                  <img src="../img/copy.png" alt="copy">  
-                </button>
+            <button  id="copy" onclick="copyText()">
+                <img src='../img/copy.png' alt="copy">  
+            </button>
+            <textarea  id="code" rows="32" readonly>
                 
-                function consultar () {<br>
-                    let nota1 = document.getElementById('nota1');<br>
-                    let nota2 = document.getElementById('nota2');<br>
-                    let soma = Number(nota1.value) + Number(nota2.value);<br>
-                    let media = soma / 2;<br>
-                    let res = document.getElementById('answer');<br>
-                    let conceito = "";<br>
-                <br>
-                    if (!nota1.value && !nota2.value) {<br>
-                        res.innerHTML = `Digite um valor válido!`<br>
-                    } else if (media >= 7) {<br>
-                        conceito = "suficiente"<br>
-                    } else if (media < 7) {<br>
-                        conceito = "Insuficiente"<br>
-                    } <br>
-                    <br>                
-                    switch (conceito) { <br>
-                        case "Insuficiente": <br>
-                            res.innerHTML = `Que pena! Sua média atual é ${media}, estude mais <br> da próxima vez!`;
-                            break; <br>
-                        case "suficiente": <br>
-                            res.innerHTML = `Parabéns! Sua média é ${media}, você passou!`; <br>
-                            break; <br> 
-                        default: <br>
-                            res.innerHTML = 'Digite suas notas!'; <br>
-                            break; <br>
-                    } <br>
-                } <br>
-            </code>
+                function consultar () {
+                    let nota1 = document.getElementById('nota1');
+                    let nota2 = document.getElementById('nota2');
+                    let soma = Number(nota1.value) + Number(nota2.value);
+                    let media = soma / 2;
+                    let res = document.getElementById('answer');
+                    let conceito = "";
+                
+                    if (!nota1.value && !nota2.value) {
+                        res.innerHTML = `Digite um valor válido!`
+                    } else if (media >= 7) {
+                        conceito = "suficiente"
+                    } else if (media < 7) {
+                        conceito = "Insuficiente"
+                    };
+                
+                    switch (conceito) {
+                        case "Insuficiente":
+                            res.innerHTML = `Que pena! Sua média atual é ${media},
+                            estude mais da próxima vez!`;
+                            break;
+                        case "suficiente":
+                            res.innerHTML = `Parabéns! Sua média é ${media},
+                            você passou!`;
+                            break;   
+                        default:
+                            res.innerHTML = 'Digite suas notas!';
+                            break;
+                    }; 
+                };
+            </textarea>
         </div>
         <h3>Output:</h3>
         <p>Digite as suas notas para saber se foi aprovado ou reprovado:</p>
