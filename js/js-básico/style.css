@@ -25,7 +25,7 @@ body {
   text-align: justify;
 
 }
-.code {
+.codeS {
   margin: 10px;
   max-width: 100%;
   font-family: Consolas,"courier new";
@@ -36,7 +36,7 @@ body {
   border-radius: 10px;
 }
 #copy {
-  position: relative;
+  position:static;
   float: right;
   height: 18px;
   width: 18px;

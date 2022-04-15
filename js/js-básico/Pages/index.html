@@ -17,11 +17,11 @@
             <h2>Switch Case</h2>
         <p>É uma forma de trabalhar com condições de forma estruturada e deixa o código mais 'clean' e de fácil compreensão. É utilizado quando o programa tem respostas diferentes para cada condição. Ele também tem um valor padrão em resposta quando nenhum dos resultados foi previsto.<br>
         Abaixo temos uma demostração de como usar em uma situação do dia a dia de uma escola por exemplo:</p>
-        <div class="code">
+        <div class="codeS">
             <button  id="copy" onclick="copyText()">
                 <img src='../img/copy.png' alt="copy">  
             </button>
-            <textarea  id="code" rows="32" readonly>
+            <textarea name="codigo"  id="code" rows="32" readonly>
                 
                 function consultar () {
                     let nota1 = document.getElementById('nota1');
@@ -67,8 +67,12 @@
             <p>
                 Laços de Repetição é como traduzimos os Loops que usamos quando queremos repetir uma sequência de ações/comandos. Usamos uma variável que vai determinar a quantidade de vezes que aquela ação vai se repetir: 
             </p>
-            <div class="code">
-                <code>
+            <div class="codeS">
+                <button  id="copy" onclick="copyText()">
+                    <img src='../img/copy.png' alt="copy">  
+                </button>
+                <textarea name="codigo" id="code" rows="9" readonly>
+
                     var numero = 5;
 
                     for (var i = 0; i <= numero; i++) {
@@ -76,10 +80,48 @@
 
                     };
                     console.log("Acabou!");
-                </code>
-            </div>
+                </textarea>
+            </div>            
             <p>
                 Nesse exemplo o "i" é o número de vezes que a ação vai se repetir. Cada vez que o 'laço for' passar/girar para verificar se i <= a váriavel 'numero' a variável "i" vai receber o número que representa a quantidade de vezes que aquele comando aconteceu. 
+                Outro exemplo de laço de repetição é o "While" que funciona de forma parecida com o "IF".
+            </p>
+            <div class="codeS">
+                <button  id="copy" onclick="copyText()">
+                    <img src='../img/copy.png' alt="copy">  
+                </button>
+                <textarea name="codigo" id="code" rows="10" readonly>
+                    var numero = 5;
+
+                    while (numero < 10) {
+                        console.log("Número "+ numero);
+                        numero++;
+                    };
+
+                    console.log("Acabou!");
+                </textarea>
+            </div>
+            <p>
+                Uma observação para qual você deve se atentar é não esquecer de colocar o "++" para a variável que irá fazer o loop, pois se não, o seu programa entrará em loop infinito. Citando o exemplo acima, o numero 5 vai ser pra sempre menor que 10, então o seu programa vai ficar rodando pra sempre até consumir toda a mémoria do seu computador.
+                Um outro exemplo:
+            </p>
+            <div class="codeS">
+                <button  id="copy" onclick="copyText()">
+                    <img src='../img/copy.png' alt="copy">  
+                </button>
+                <textarea name="codigo" id="code" rows="12" readonly>                    
+                    var numero = Math.random() * 100;
+
+                    while (numero < 90) {
+                        console.log(numero);
+                        numero++;
+                    };
+
+                    console.log("Acabou!");
+                </textarea>
+            </div>
+            <p>
+                Nesse caso acima não podemos saber quantas vezes o laço será executado até que a condição não seja mais verdade. Então a gente usa o "While" quando temos uma condição e não sabemos quando ela irá ser satisfeita. Daria para usar o "for" nesse caso também, mas tornaria a leitura do código mais difícil de compreender.
             </p>
         </div>
         
