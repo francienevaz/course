@@ -32,8 +32,7 @@ function consultar () {
 // função para copiar texto em tela
 
 function copyText () {
-    const copy = document.querySelector("#code");
-
+    const copy = document.querySelector(".code");
     navigator.clipboard.writeText(copy.value);
 
     // Alert the copied text

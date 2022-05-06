@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Eventos</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JavaScript - Hello World  &#9996</h1>
+        </div>
+   <div class="main">
+    <h1 class="title" >Eventos DOM</h1>
+    <p>
+        Aqui estamos utilizando de um evento listener chamado "onclick", que serve para tornar a página mais dinâmica. No exemplo abaixo ao clicar no botão click o evento "onclick" vai executar a função "hide()" que irá por sua vez esconder a imagem:
+    </p>
+
+    <img id="tunic" src="../img/tunic.png" alt="game">
+
+    <div id="botao" onclick="hide(this)">
+        Click
+    </div>
+   </div>
+    </div>
+    <script>
+        function hide(input) {
+            let h1  = document.getElementsByTagName('img')[0];
+            h1.style.display = "none";
+        }
+    </script>
+</body>
+</html>

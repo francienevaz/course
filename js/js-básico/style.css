@@ -25,6 +25,14 @@ body {
   text-align: justify;
 
 }
+.title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#tunic {
+  width: 90%;
+  border-radius: 40px;
+}
 .codeS {
   margin: 10px;
   max-width: 100%;
@@ -42,6 +50,16 @@ body {
   width: 18px;
 }
 #copy:hover {
+  cursor: pointer;
+}
+/* botão pagina Eventos DOM */
+#botao {
+  display: inline-block;
+  padding: 15px;
+  font-size: 2rem;
+  background-color: blueviolet;
+  color: bisque;
+  border-radius: 45px;
   cursor: pointer;
 }
  li {
