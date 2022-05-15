@@ -13,11 +13,25 @@
 
             t.innerHTML = 'Página carregada';
         }
+
+        function loaded() {
+            let img = document.getElementById('tunic');
+
+            img.addEventListener("click", changeImg);
+            img.addEventListener("mouseout", mouseOut);
+            
+        }        
+        function changeImg() {
+            this.src = "../img/tunic1.png";            
+        }
+        function mouseOut() {
+            this.src = "../img/tunic.png";
+        }
     </script>
 
 </head>
 
-<body onload="loader()">
+<body onload="loaded()">
 
     <div class="container">
         <div class="header">
@@ -25,10 +39,11 @@
         </div>
         <div class="main">
     <h1 class="title" >Eventos DOM</h1>
-    <p id="titulo" > Efeito do OnLoad na tela</p>
+    <p id="titulo" > Efeito do Onload na tela ('Aqui precisa chamar a função loader( )')</p>
+    <p>Abaixo se você clicar na imagem, ela irá mudar e ao tirar o mouse sobre a imagem ela irá voltar a imagem de origem. Esse são os eventos onClick, mouseOut e mouseOver.</p>
     <div>
         <img id="tunic" src="../img/tunic.png" alt="tunic">
-        <img id="tunic" src="../img/tunic1.png" alt="tunic">
+        <!-- <img id="tunic" src="../img/tunic1.png" alt="tunic"> -->
     </div>
         </div>
     </div>
