@@ -23,12 +23,30 @@
     <div id="botao" onclick="hide(this)">
         Click
     </div>
+    <div id="botao" onmouseover="onOver(this)"
+    onmouseout="onOut(this)"
+    onclick="onClick(this)">
+        Click
+    </div>
+
    </div>
     </div>
     <script>
         function hide(input) {
             let h1  = document.getElementsByTagName('img')[0];
             h1.style.display = "none";
+        }
+
+        function onClick (elemento) {
+            elemento.style.backgroundColor = "blueviolet";
+        }
+
+        function onOver(elemento) {
+            elemento.style.backgroundColor = "red";
+        }
+
+        function onOut(elemento) {
+            elemento.style.backgroundColor = "blue";
         }
     </script>
 </body>
