@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Listener</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        function loader() {
+            let t = document.getElementById('titulo');
+
+            t.innerHTML = 'Página carregada';
+        }
+    </script>
+
+</head>
+
+<body onload="loader()">
+
+    <div class="container">
+        <div class="header">
+            <h1>JavaScript - Hello World  &#9996</h1>
+        </div>
+        <div class="main">
+    <h1 class="title" >Eventos DOM</h1>
+    <p id="titulo" > Efeito do OnLoad na tela</p>
+    <div>
+        <img id="tunic" src="../img/tunic.png" alt="tunic">
+        <img id="tunic" src="../img/tunic1.png" alt="tunic">
+    </div>
+        </div>
+    </div>
+    
+</body>
+</html>
