@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = {
+            nome: "Joseph",
+            nota: 8.5
+        }
+
+        let b =JSON.stringify(a);
+        // O Object Json está transformando o objeto 'a' em uma string
+
+        let a2 = '{"nome": "Fabio", "nota": 7.8}';
+
+        let b2 = JSON.parse(a2);
+        // O Object Json está transformando a string 'a2' em um objeto
+
+        console.log(a)
+        console.log(b)
+
+        console.log(a2)
+        console.log(b2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -15,18 +15,18 @@
         // console.log(h1.parentElement);
         // para acessar um filho de um propriedade colocamos o ponto children e a posição da array retornada;
         // para acessar o pai de um elemento basta colocar o ponto parentElement
-        let h1 = document.getElementsByTagName('h1');        
+            let h1 = document.getElementsByTagName('h1');        
 
-        for(let h of h1) {
-          console.log(h1); 
-          
-          h.addEventListener("click", qop)
-        }
+            for(let h of h1) {
+            console.log(h1); 
+            
+            h.addEventListener("click", qop)
+            }
 
-        function qop(e) {
-            let t = e.target;
-            console.log(t.parentElement);
-        }
+            function qop(e) {
+                let t = e.target;
+                console.log(t.parentElement);
+            }
         }
     </script>
 </head>
