@@ -11,32 +11,26 @@
 </style>
 
 <script>
+    function addItem() {
+    let array = [];
+    // let products = document.getElementById("item");
+    let item = localStorage.getItem("item");
+    let items = array.push(JSON.stringify(item.value));
     
-    onload = function () {
-        let item = localStorage.getItem("item");
-        let l = document.getElementById("products");
-        l.innerHTML = item;
+    let list = document.getElementById("list");
+
+    for (let i = 0; i < items.length; i++) {
+        
+        list.innerHTML = items;
     }
-    var array = [];
-
-function Add (items) {
-
-    let itemList = localStorage.getItem('itemName')
-        ? JSON.parse(localStorage.getItem('itemName'))
-        : [];
-
-    itemList.push(items);
-    let item = JSON.stringfy(itemList);
-
-    localStorage.setItem('itemName', item );
+    
 }
     
     function loading(element) {
         let item = element.value;
-        console.log(item);
-        let l = document.getElementById("products");
+        let list = document.getElementById("list");
         
-        l.innerHTML = item;
+        list.innerHTML = item;
         
         localStorage.setItem("item", item);
     }
@@ -49,9 +43,9 @@ function Add (items) {
         </div>
         <div class="items">
             <input type="text" id="item" oninput="loading(this)">
-            <button id="btn" onclick="Add()">Add</button>
+            <button id="btn" onclick="addItem()">Add</button>
             <ul>
-              <li id="products"></li>  
+              <li id="list"></li>  
             </ul>
             
         </div>
