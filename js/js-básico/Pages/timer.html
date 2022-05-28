@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeColor () {
+            let h1 = document.getElementsByTagName("h1")[0];
+            h1.style.color = "purple";
+        }
+        function changeText() {
+            let h1 = document.getElementsByTagName("h1")[0];
+            h1.innerHTML = "New Title";
+
+            setTimeout(changeColor , 3000)
+            // aqui passamos como argumento uma função e o tempo em milisegundos, no caso acima são 3 segundos
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Title</h1>
+    <input onclick="changeText()" type="submit" value="Change">
+</body>
+</html>
