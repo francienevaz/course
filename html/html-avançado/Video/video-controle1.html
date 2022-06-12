@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+
+        .container {
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+
+        .video {
+            width: 100%;
+
+        }
+
+        .controle {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /* background-color: red; */
+            text-align: center;
+        }
+
+        .btn {
+            position: relative;
+            width: 60px;
+            /* margin: 10px; */
+            padding: 10px;
+            top: 100%;
+            transform: translate(-120%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <video class="video" src="./Img/Itachi.mp4"></video>
+
+        <div class="controle">
+            <img class="btn" src="./Img/back.PNG" alt="voltar">
+            <img class="btn" src="./Img/decrease.PNG" alt="diminuir">
+            <img class="btn" src="./Img/play.PNG" alt="play">
+            <img class="btn" src="./Img/stop.PNG" alt="parar">
+            <img class="btn" src="./Img/increase.PNG" alt="aumentar">
+            <img class="btn" src="./Img/foward.PNG" alt="avançar">
+        </div>
+
+    </div>
+    
+</body>
+</html>
