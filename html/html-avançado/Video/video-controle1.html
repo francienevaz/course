@@ -39,18 +39,48 @@
 <body>
     <div class="container">
 
-        <video class="video" src="./Img/Itachi.mp4"></video>
+        <video id="video1" class="video" src="./Img/Itachi.mp4"></video>
 
         <div class="controle">
-            <img class="btn" src="./Img/back.PNG" alt="voltar">
-            <img class="btn" src="./Img/decrease.PNG" alt="diminuir">
-            <img class="btn" src="./Img/play.PNG" alt="play">
-            <img class="btn" src="./Img/stop.PNG" alt="parar">
-            <img class="btn" src="./Img/increase.PNG" alt="aumentar">
-            <img class="btn" src="./Img/foward.PNG" alt="avançar">
+            <img class="btn" onclick="back()"  src="./Img/back.PNG" alt="voltar">
+            <img class="btn" onclick="decrease()"  src="./Img/decrease.PNG" alt="diminuir">
+            <img class="btn" onclick="play()"  src="./Img/play.PNG" alt="play">
+            <img class="btn" onclick="stop()"  src="./Img/stop.PNG" alt="parar">
+            <img class="btn" onclick="increase()" src="./Img/increase.PNG" alt="aumentar">
+            <img class="btn" onclick="foward()"  src="./Img/foward.PNG" alt="avançar">
         </div>
 
     </div>
+
+    <script>
+        let video = document.getElementById("video1");
+
+        function  back() {
+            video.currentTime -= 15;
+
+        }
+
+        function  decrease() {
+            video.playbackRate -= 0.1;
+        }
+
+        function play() {
+            video.play();
+        }
+
+        function  stop() {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        function increase() {
+            video.playbackRate += 0.1;
+        }
+
+        function  foward() {
+            video.currentTime += 15;
+        }
+    </script>
     
 </body>
 </html>
