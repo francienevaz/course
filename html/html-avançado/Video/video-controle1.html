@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video</title>
+    <script src="./script.js" defer></script>
     <style>
 
         .container {
@@ -50,37 +51,6 @@
             <img class="btn" onclick="foward()"  src="./Img/foward.PNG" alt="avançar">
         </div>
 
-    </div>
-
-    <script>
-        let video = document.getElementById("video1");
-
-        function  back() {
-            video.currentTime -= 15;
-
-        }
-
-        function  decrease() {
-            video.playbackRate -= 0.1;
-        }
-
-        function play() {
-            video.play();
-        }
-
-        function  stop() {
-            video.pause();
-            video.currentTime = 0;
-        }
-
-        function increase() {
-            video.playbackRate += 0.1;
-        }
-
-        function  foward() {
-            video.currentTime += 15;
-        }
-    </script>
-    
+    </div>  
 </body>
 </html>

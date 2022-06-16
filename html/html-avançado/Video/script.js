@@ -1,25 +1,28 @@
-    let video = document.getElementById("video1");
+console.log("Hello World!")
+let video = document.getElementById("video1");
 
-    function  back() {
+function  back() {
+    video.currentTime -= 15;
 
-    }
+}
 
-    function  decrease() {
+function  decrease() {
+    video.playbackRate -= 0.1;
+}
 
-    }
-
-    function play() {
+function play() {
     video.play();
-    }
+}
 
-    function  stopped() {
+function  stop() {
+    video.pause();
+    video.currentTime = 0;
+}
 
-    }
+function increase() {
+    video.playbackRate += 0.1;
+}
 
-    function increase() {
-
-    }
-
-    function  foward() {
-
-    }
+function  foward() {
+    video.currentTime += 15;
+}
