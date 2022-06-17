@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio e Fim </title>
+    <style>
+        #tela {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="tela" width="500px" height="500px">
+
+    </canvas>
+    <script>
+        let tela = document.getElementById("tela");
+
+        let ctx = tela.getContext("2d");
+
+        let x = 250;
+        let y = 250;
+        let raio = 100;
+
+        let inicio = 0;
+        let fim = 2 * Math.PI;
+
+        ctx.beginPath();
+        ctx.strokeStyle = "purple";
+        ctx.fillStyle = "purple";
+        ctx.arc(x, y, raio, inicio, fim);
+        ctx.fill();
+        ctx.stroke();
+    </script>
+    
+</body>
+</html>
