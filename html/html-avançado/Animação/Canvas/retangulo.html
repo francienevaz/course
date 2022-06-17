@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro + Linhas</title>
+    <style>
+        #tela {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="tela" width="500px" height="500px">
+
+    </canvas>
+    <script>
+        let tela = document.getElementById("tela");
+
+        let ctx = tela.getContext("2d");
+
+    ctx.rect(10,10,100,200);
+    ctx.fillStyle = "blue";
+    // ctx.fillRect(10,10,100,200);
+
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 5;
+    // ctx.strokeRect(10,10,100,200);
+
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.clearRect(25,40,30,30);
+    ctx.clearRect(40,115,45,90);
+
+
+    </script>
+</body>
+</html>
