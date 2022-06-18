@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio e Fim </title>
     <style>
-        #tela {
+        /* #tela {
             background-color: bisque;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -20,19 +20,46 @@
 
         let ctx = tela.getContext("2d");
 
-        let x = 250;
-        let y = 250;
-        let raio = 100;
+        let circle = {
+             x : 250,
+             y : 250,
+             raio : 100,
+             inicio : 0,
+             fim : 0, 
+             antiHorario : false
+        }
+        
 
-        let inicio = 0;
-        let fim = 2 * Math.PI;
+        function drawCircle (c) {
+            ctx.beginPath();
+            ctx.rect(0, 0, 500, 500);
+            ctx.fillStyle = "black";
+            ctx.fill();
 
-        ctx.beginPath();
-        ctx.strokeStyle = "purple";
-        ctx.fillStyle = "purple";
-        ctx.arc(x, y, raio, inicio, fim);
-        ctx.fill();
-        ctx.stroke();
+            ctx.beginPath();
+            ctx.strokeStyle = "purple";
+            ctx.fillStyle = "purple";
+            ctx.arc(c.x, c.y, c.raio, c.inicio, c.fim, c.antiHorario);
+
+            ctx.fill();
+            ctx.stroke();
+
+        }
+
+        // drawCircle(circle);
+
+        setInterval(function () {
+            if (circle.fim < 2 * Math.PI) {
+                circle.fim += 0.3;
+                circle.x += 3;
+            }
+            
+            drawCircle(circle);
+
+        }, 40)
+
+        
+        
     </script>
     
 </body>
