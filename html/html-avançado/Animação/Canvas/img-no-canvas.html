@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+    <style>
+            #tela {
+            background-color: bisque;
+
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    
+    <canvas id="tela" width="1000px" height="650px">
+
+    </canvas>
+
+    <script>
+        let tela = document.getElementById("tela");
+
+        let ctx = tela.getContext("2d");
+
+        let img = new Image();
+        img.src = "./Img/cat.jpg";
+
+        img.onload = desenharImg;
+
+        function desenharImg() {
+
+        ctx.drawImage(this, 20, 20); 
+
+        }
+
+        
+        
+    </script>
+    
+</body>
+</html>
