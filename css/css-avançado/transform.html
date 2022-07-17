@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformações</title>
+</head>
+<style>
+    *{
+        margin: 50px 0 50px 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        background-color: rgb(186, 252, 87);
+        box-sizing: border-box;
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .item1 {
+        
+        width: 500px;        
+        border: 5px black solid;
+        transform: scale(0.5);
+
+    }
+    .item2 {
+        width: 500px;
+        border: 5px black solid;
+        transform: scale(0.5) skew(20deg);   
+    }
+    .item3 {
+        border: 5px black solid;
+        transform: rotate(45deg);
+    }
+
+    .item4 {
+        border: 5px black solid;
+        transform: rotate(-20deg);
+    }
+
+    .item5 {
+        border: 5px black solid;
+        transform: scale(0.9);
+    }
+
+    .item6 {
+        border: 5px black solid;
+        transform: scale(1) skew(-10deg);
+    }
+</style>
+<body>
+    <div class="container">
+
+        <img src="./Img/mom.jfif" alt="Mom" class="item4"> 
+        
+        <img src="./Img/rickMortyII.jfif" alt="Rick e Morty" class="item5">        
+        <img src="./Img/fred.jfif" alt="Fred" class="item3"> 
+        <img src="./Img/rickAndMorty.png" alt="Rick e Morty" class="item2">
+        <img src="./Img/rickMorty.png" alt="Rick e Morty" class="item1">       
+        <!-- <img src="./Img/rickMortyIII.jfif" alt="Rick e Morty" class="item6"> -->
+        
+    </div>
+</body>
+</html>
