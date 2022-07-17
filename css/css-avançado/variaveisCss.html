@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis dentro do Css</title>
+</head>
+<style>
+    :root {
+        --var-color: #f71069;
+        --circle: 200px;
+        --square: 100px;
+    }
+    .circle {
+        height: var(--circle);
+        width: var(--circle);
+        background-color: var(--var-color);
+        border-radius: 50%;
+        margin-bottom: 50px;
+    }
+    .square {
+        height: var(--square);
+        width: var(--square);
+        background-color: var(--var-color);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="square"></div>
+    </div>
+</body>
+</html>
