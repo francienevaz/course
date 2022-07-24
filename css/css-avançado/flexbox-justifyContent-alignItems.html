@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Justify-Content + Align-Items</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        /* flex-flow serve para juntar o flex-direction com o flex-wrap */
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: space-evenly;
+        background-color: #004747;
+        height: 400px;
+        color: #fff;
+    }
+
+    .r1 {
+        background-color: #640164;
+    }
+
+    .r2 {
+        background-color: #00008b;
+    }
+
+    .r3 {
+        background-color: #ff8c00;
+    }
+
+    .r4 {
+        background-color: #6b0303;
+    }
+
+    .r5 {
+        background-color: #248000;
+    }
+
+    .r6 {
+        background-color: #da0049;
+    }
+
+    .rect {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>
+        <div class="rect r4">4</div>
+        <div class="rect r5">5</div>
+        <div class="rect r6">6</div>
+    </div>
+</body>
+</html>
