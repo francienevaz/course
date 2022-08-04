@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dobro = x => 2 * x; // a forma bem simplificada da arrow function
+        
+        let segundoExemploDobro = function () {
+            return 2 * this.x;
+        }
+
+        let numero = {
+            x: 91,
+            d: segundoExemploDobro
+        }
+
+        console.log(numero.d());       
+
+        console.log(dobro(8));
+    </script>
+</body>
+</html>
