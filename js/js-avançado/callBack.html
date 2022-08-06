@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Callback é quando temos uma função e essa mesma função é passada como parâmetro, ou seja, na tradução livre "Chamar de volta"
+        function ola() {
+            console.log("Olá");
+        }
+
+        function tchau() {
+            console.log("Tchau");
+        }
+
+        function saudacao(s, nome) {
+            s(); // Aqui temos  um callback
+            console.log(nome);
+        }
+
+        saudacao(ola, "Fran");
+
+    </script>
+</body>
+</html>

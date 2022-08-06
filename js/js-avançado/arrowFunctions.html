@@ -8,6 +8,11 @@
 </head>
 <body>
     <script>
+        // As funções arrow functions não entendem o "this" e nem o "bind", o "this" pra ela vai ser sempre o objeto global, no caso abaixo o objeto "window";
+        // let dobro = function () {
+        // console.log(this)
+        // }
+
         let dobro = x => 2 * x; // a forma bem simplificada da arrow function
         
         let segundoExemploDobro = function () {

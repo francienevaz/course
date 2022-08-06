@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // A Promise é uma maneira mais nova e melhor de se utilizar callbacks, na verdade ela veio para substituir as callbacks
+        
+        let usuarios = ["Adriana", "Marcia", "José"];
+
+        function insereUsuario(nome) {
+            let promise = new Promise(function(resolve, reject) {
+            setTimeout(() => {
+                    usuarios.push(nome);
+                    let error = false;
+                
+                    if (!error) {
+                    resolve();
+                    } else {
+                    reject({msg: "Erro na execução do código..."})
+                    }
+                }, 5000);
+            })
+            return promise;
+        }
+
+        
+
+        function listarUsuarios () {
+            console.log(usuarios);
+        }
+
+        async function executar() {
+            await insereUsuario("Fran");
+            listarUsuarios();
+        }
+
+        executar();
+    </script>
+</body>
+</html>

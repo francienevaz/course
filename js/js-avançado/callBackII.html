@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  Nesse exemplo, a função listarUsuario é a nossa callback
+        let usuarios = ["Adriana", "Marcia", "José"];
+
+        function insereUsuario (nome, callback) {
+            setTimeout(() => {
+                usuarios.push(nome);
+                callback();
+            }, 5000);
+        }
+
+        function listarUsuarios () {
+            console.log(usuarios);
+        }
+
+        insereUsuario("Fran", listarUsuarios);
+
+
+    </script>
+</body>
+</html>
