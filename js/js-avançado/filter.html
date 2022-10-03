@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Filter</title>
+</head>
+<body>
+    <script>
+        // A função abaixo filtra sem o uso do filter os estudantes que tem menos de 30 anos
+        function newStudent (name, age) {
+            return {name, age}
+        }
+
+        let alunos = [
+            newStudent("Alice", 23),
+            newStudent("Joseph", 33),
+            newStudent("Pedro", 35),
+            newStudent("Julia", 26), 
+            newStudent("David", 19)
+        ];
+
+        for (let student of alunos) {
+            if (student.age < 30) {
+                console.log(student.name);
+            }
+        }
+    </script>
+</body>
+</html>

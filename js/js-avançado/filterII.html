@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Filter</title>
+</head>
+<body>
+    <script>
+        //A função abaixo usa o método filter para filtrar os estudantes com mais de 30 anos
+        // O método filter usa um callback que retorna true ou false
+        // Ou seja a function maiorQue30 está fazendo uma verificação que retorna todos os estudantes maiores
+        // que 30 anos, retornando uma nova array com esses alunos
+        // se a function retornasse somente true, retornaria a array "alunos" completa, pois não estaria fazendo uma verificação
+        function newStudent (name, age) {
+            return {name, age}
+        }
+
+        let alunos = [
+            newStudent("Alice", 23),
+            newStudent("Joseph", 33),
+            newStudent("Pedro", 35),
+            newStudent("Julia", 26), 
+            newStudent("David", 19)
+        ];
+
+
+        function maiorQue30 (student) {
+            return student.age > 30
+        }
+
+        function menorQue30 (student) {
+            return student.age < 30
+        }
+
+        let alunosComMaisde30 = alunos.filter(maiorQue30)
+
+        let alunosComMenosde30 = alunos.filter(menorQue30)
+
+        console.log(alunosComMaisde30)
+        console.log(alunosComMenosde30)
+
+    </script>
+</body>
+</html>
