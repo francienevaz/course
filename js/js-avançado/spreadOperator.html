@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+        let pessoa = {
+            nome: "Maria Aparecida",
+            idade: 33
+        }
+
+        let contato = {
+            tel : "11 96025-4847",
+            email: "maria.ap@gmail.com"
+        }
+
+        let copia = {...pessoa, ...contato};
+
+        copia.idade = 57;
+
+        console.log(pessoa);
+        console.log(copia);
+
+        var notaTurmaA = [10,8,7,9,7,8];
+        var notaTurmaB = [6,7,8,4,5,10];
+        var todasAsnotas = [...notaTurmaA, ...notaTurmaB];
+
+        console.log(todasAsnotas);
+
+    </script>
+</body>
+</html>
