@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor X Referência</title>
+</head>
+<body>
+    <img src="./ValorXreferencia.png" alt="exemplo">
+    <script>
+        // Uma forma de manter os dados originais seria usar o método slice(), ou o ... , como mostrado abaixo:
+        let personagensLucifer = ["Lucifer", "Amenadiel", "Chloe", "Mazikeen"];
+
+        // let personagensLuciferII = personagensLucifer.slice();
+
+        let personagensLuciferII = [...personagensLucifer];
+
+        personagensLuciferII.push("Daniel", "Dra. Linda", "Charlotte", "Trixie", "Cain");
+
+        console.log(personagensLucifer, personagensLuciferII);
+
+        // Como funciona com Objetos :
+
+        let alunoA = {
+            nome: "Julia",
+            idade: 19
+        }
+
+        let alunoB = Object.assign({}, alunoA);
+
+        alunoB.idade = 25;
+
+        console.log(alunoA, alunoB)
+
+        // Outra forma de manter o valor original do Objeto é usando ... igual no exemplo anterior com Arrays:
+
+        let funcionariaA = {
+            nome: "Melissa",
+            idade: 19
+        }
+
+        let funcionariaB = {...funcionariaA};
+
+        funcionariaB.nome = "Roberta";
+        funcionariaB.idade = 29;
+
+        console.log(funcionariaA, funcionariaB)
+    </script>
+</body>
+</html>

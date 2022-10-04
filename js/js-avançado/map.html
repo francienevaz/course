@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        function newCustomer (name, email, age) {
+            return {name, email, age}
+        }
+
+        let customers = [
+            newCustomer("Bruno Fraga", "brunolfraga@gmail.com", 30),
+            newCustomer("Carlos Eduardo", "carloseduardo@gmail.com", 28),
+            newCustomer("Carla Bruna", "carlinha_barreto@outlook.com", 19),
+            newCustomer("Julia Harumi", "juliaharumi@gmail.com", 25)
+
+        ];
+
+        function nameAge(customer) {
+            return customer.name + " tem " + customer.age + " anos "
+        }
+
+        console.log(customers.map(nameAge));
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor X Referência</title>
+</head>
+<body>
+    <!--  -->
+    <script>
+        // Nesse primeiro exemplo a idade do alunoA foi alterada quando o objeto alunoB recebeu o alunoA por referência.
+        let alunoA = {
+            nome: "Carla", 
+            idade: 19
+        }
+
+        let alunoB = alunoA;
+
+        alunoB.idade = 25;
+
+        console.log(alunoB, alunoA);
+
+        // Isso funciona diferente quando trabalhamos com Tipos Primitivos (string, boolean, number...). No exemplo abaixo o valor de a é mantido, e b recebe 10. Essa atribuição é feita por Valor, e não por referência da variável.
+
+        let a = 15;
+
+        let b = a;
+
+        b = 10;
+
+        console.log(b, a);
+
+        // Arrays também tem atribuição por  referência no JS
+
+        let turmaA = ["Amenadiel", "Chloe", "Mazikeen"];
+
+        let turmaB = turmaA;
+
+        turmaB.push("Lucifer");
+
+        console.log(turmaA, turmaB)
+
+
+    </script>
+</body>
+</html>
