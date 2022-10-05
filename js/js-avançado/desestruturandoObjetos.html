@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desestruturando um Objeto</title>
+</head>
+<body>
+    <script>
+        let aluno = {
+            matricula: 5050,
+            nome: "João",
+            telefone: 960257484,
+            cidade: "São Paulo"
+        }
+
+        let aluno1 = {
+            matricula: 5151,
+            nome: "Marcone",
+            telefone: 961548789,
+            cidade: "São Paulo"
+        }
+
+        let aluno2 = {
+            matricula: 4950,
+            nome: "Clara",
+            telefone: 961654645,
+            cidade: "São Paulo"
+        }
+
+        const {matricula, nome, ...resto} = aluno;
+
+        var alunos = [aluno, aluno1, aluno2]
+
+        const [João, ...outros] = alunos
+
+        console.log(resto);
+        console.log(matricula, nome);
+        console.log(João);
+        console.log(outros);
+
+
+
+        // O exemplo acima mostra como desestruturar um objeto, no exemplo queremos separar a matricula e o nome da cópia do objeto que estamos criando, o "resto"
+    </script>
+</body>
+</html>
