@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    <script>
+        function novoAluno(nome, idade) {
+            return {nome, idade}
+        };
+
+        let alunos = [
+            novoAluno("Maria", 23),
+            novoAluno("Carlos", 33),
+            novoAluno("Guilherme", 19),
+            novoAluno("Rodrigo", 21),
+            novoAluno("Catarina", 28),
+        ]
+
+        function idadeTurma(total, aluno) {
+            return total + aluno.idade
+        }
+
+        console.log(alunos.reduce(idadeTurma, 0));
+
+        //  O reduce vai reduzir todas as entradas de um array em uma única entrada, pode ser qualquer coisa, vai depender do que a função pede
+
+    </script>
+</body>
+</html>
