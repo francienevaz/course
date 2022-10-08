@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Quicksand', sans-serif;
+            height: 100vh;
+            margin: 0;
+            background-color: beige;
+        }
+
+        img {
+            max-width: 600px;
+            border-radius: 30px;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        button {
+            border: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 16px;
+            background: orangered;
+            color: white;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+
+        button:hover {
+            background: orange;
+        }
+    </style>
+    <main>
+        <h1>Just... cats!</h1>
+        <img id="cat" /><br />
+        <button id="change-cat">Change cat</button>
+    </main>
+    <script type="module">
+        
+        import { random, id } from "./node_modules/@thatcopy/catapi";
+
+        const getCats = async () => {
+            try {
+                const data = await random();
+
+                console.log(random())
+                const json = await data.json();
+            
+                return json.webpurl;
+            } catch (e) {
+                console.log(e.message);
+            }
+        };
+
+        const loadImg = async () => {
+            const img = document.getElementsByTagName('img')[0];
+            img.src = await getCats();
+        };
+
+        loadImg();
+
+        const btn = document.getElementById('change-cat');
+        btn.addEventListener('click', loadImg);
+    </script>
+</body>
+</html>
