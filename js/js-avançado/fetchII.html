@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="valor">
+        <input type="button" value="Converter" onclick="converter()">   
+    </form>
+    <h1 id="resultado"></h1>
+    <script>
+
+        function converter() {
+
+        let url = "https://api.apilayer.com/exchangerates_data/latest?base=USD&symbols=BRL";
+        let myHeaders = new Headers();
+        myHeaders.append("apikey", "token");
+
+        let requestOptions = {
+        method: 'GET',
+        redirect: 'follow',
+        headers: myHeaders
+        };
+
+        
+            let input = document.getElementById("valor");
+            let valor = input.value;
+
+            fetch(url, requestOptions)
+
+            .then(response => {
+                console.log(response)
+                return response.json()
+                
+            })
+            .then(result => {
+                let rate = result.rates.BRL;
+
+                document.getElementById("resultado").innerHTML = rate * valor;
+            } )
+            .catch(error => console.log('error', error));
+        }
+
+    </script>
+</body>
+</html>
