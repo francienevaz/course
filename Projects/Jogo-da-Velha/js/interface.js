@@ -18,8 +18,15 @@ function handleClick(event) {
             alert("Game Over! - O Vencedor foi o jogador " + playerTime);
         }, 15);
     };
-    updateSquares();
+    updateSquare(position);
 
+}
+
+function updateSquare (position) {
+    
+    let square = document.getElementById(position.toString());
+    let symbol = board[position];
+    square.innerHTML = `<div class='${symbol}'><div>`   
 }
 
 
