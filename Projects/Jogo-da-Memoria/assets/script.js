@@ -14,4 +14,19 @@ let hogwarts = [
     'patrono'
 ];
 
-function createCardsFromHogwarts ()
+function createCardsFromHogwarts (characters) {
+    let cards = [];
+
+    for(let character of characters){
+        cards.push(createPairFromHogwarts(character))
+    }
+}
+
+function createPairFromHogwarts(character){
+
+    return [{
+        id: createIdWithCharacter(character),
+    }, {
+
+    }]
+}
