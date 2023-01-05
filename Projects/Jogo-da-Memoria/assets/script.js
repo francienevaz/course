@@ -58,7 +58,7 @@ function createCardFace (face, card, element) {
         let iconElement = document.createElement('img');
 
         iconElement.classList.add(ICON);
-        iconElement.src = "/Projects/Jogo-da-Memoria/imgs/" + card.icon + ".png" ;
+        iconElement.src = "/Projects/Jogo-da-Memoria/imgs/png" + card.icon + ".png" ;
         cardElementFace.appendChild(iconElement)
     } else {
         cardElementFace.innerHTML = '&lt/&gt';
