@@ -6,6 +6,7 @@ let game = {
 
     setCard: function (id) {
         let card = this.cards.filter(card => card.id === id) [0];
+        console.log(card);
 
         if (card.flipped || this.lockMode) {
             return false;
@@ -22,6 +23,9 @@ let game = {
     },
 
     checkMatch: function() {
+        if(!this.firstCard || !this.secondCard){
+            return false;
+        }
         return this.firstCard.icon === this.secondCard.icon;
 
     },
