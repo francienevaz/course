@@ -14,9 +14,11 @@ let game = {
 
         if (!this.firstCard){
             this.firstCard = card;
+            this.firstCard.flipped = true;
             return true;
         } else {
             this.secondCard = card;
+            this.secondCard.flipped = true;
             this.lockMode = true;
             return true;
         }
@@ -36,6 +38,15 @@ let game = {
         this.lockMode = false;
     },
 
+    unflipCards(){
+        this.firstCard.flipped = false;
+        this.secondCard.flipped = false;
+        this.clearCards();
+    }, 
+
+    checkGameOver(){
+        return this.card.filter(card => !card.flipped).length == 0;
+    },
     hogwarts: [
         'dumbledore',
         'harry',
