@@ -17,7 +17,7 @@ let game = {
     createCardsFromHogwarts: function () {
         this.cards = [];
     
-        this.characters.forEach((character) => {
+        game.hogwarts.forEach((character) => {
             this.cards.push(this.createPairFromHogwarts(character));
         })
         // for(let character of characters){
