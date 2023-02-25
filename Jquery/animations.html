@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Eventos com Jquery</title>
+    	<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .stage {
+            background-color: rgb(243, 74, 74);
+            height: 300px;
+            width: 400px;      
+            border-radius: 20px;            
+            box-shadow: 10px 10px 15px 8px;
+            margin: 20px;
+            
+        }
+
+        .show {
+            height: 300px;
+            width: 400px;
+            cursor: pointer;
+            border-radius: 20px; 
+            box-shadow: 10px 10px 15px 8px;
+            margin: 20px;
+        }
+    	</style>
+</head>
+<body>
+    <h1>Jquery</h1>
+    <div class="content">
+        <div class="stage"></div>
+        <div style="display: none;" class="show" id="sair">
+        <h2>Não saia!</h2>
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let square = document.querySelector(".stage");
+
+        $(square).click(() => {
+            $(this).addClass(".show");
+            console.log("click")
+        })
+
+        $(square).mouseenter(() => {
+            console.log("Mouse enter")
+        })
+
+        $(document).mouseleave(() => {
+            $("#sair").show();
+        })
+
+        $(square).dblclick(() => {
+            console.log("Double click")
+        })
+    </script>
+</body>
+</html>	
