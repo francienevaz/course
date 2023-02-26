@@ -3,29 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animações com Jquery</title>
-  <style>
-  #square {
-		  width: 500px;
-		  height: 500px;
-		  background-color: red;
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Animações com Jquery</title>
+  	<style>
+
+		.squad {
+			display: flex;
+		}
+
+		button {
+			position: relative;
+			height: 50px;
+			width: 100px;
+		}
+
+  		#square {
+		  	width: 500px;
+		  	height: 500px;
+		  	background-color: red;
 	  
-	}
-	#squareII {
-		  width: 500px;
-		  height: 500px;
-		  background-color: purple;
-		  display: none;
-	}
-  </style>
+		}
+		#squareII {
+		  	width: 500px;
+		  	height: 500px;
+		  	background-color: purple;
+		  	display: none;
+		}
+
+  		#squareIII {
+		  	width: 500px;
+		  	height: 500px;
+		  	background-color: lightslategray;
+		}
+  	</style>
 </head>
 <body>
-	<button id="btn">Fade out</button>
-	<div id="square"></div>
-	<button id="btnII">Fade in</button>
-	<div id="squareII"></div>
-
+	<div class="squad">
+		<button id="btn">Fade out</button>
+		<div id="square"></div>
+		<button id="btnII">Fade in</button>
+		<div id="squareII"></div>
+		<button id="btnIII">Slide Toggle</button>
+		<div id="squareIII"></div>
+		<button id="btnStop">Stop</button>
+	</div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
 	    //$(#btn).click((e) => {
@@ -38,6 +59,13 @@
 	    $("#btnII").click(() => {
 		$("#squareII").fadeIn();	   
 	    })
+		$("#btnIII").click(() => {
+		$("#squareIII").slideToggle(10000);	   
+	    })
+		$("#btnStop").click(() => {
+		$("#squareIII").stop();	   
+	    })
+
 
   </script>
 </body>
