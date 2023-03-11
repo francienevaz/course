@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery - Selecionando elementos filhos</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div class="list">
+        <h1>List 1</h1>
+        <ul class="list1">
+            <li class="item1">Element 1</li>
+            <li class="item2">Element 2</li>
+            <li class="item3">Element 3</li>
+            <li class="item4">Element 4</li>
+            <li class="item5">Element 5</li>
+            <li class="item6">Element 6</li>
+        </ul>
+        <h1>List 2</h1>
+        <ul class="list2">
+            <li class="item1">Element 1</li>
+            <li class="item2">Element 2</li>
+            <li class="item3">Element 3</li>
+            <li class="item4">Element 4</li>
+            <li class="item5">Element 5</li>
+            <li class="item6">Element 6</li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // $(".item2").hide();
+        // $("#list .item2").hide();
+
+        let list1 = $(".list1");
+        let list2 = $(".list2");
+
+        list1.find(".item2").hide();
+    </script>
+</body>
+</html>
