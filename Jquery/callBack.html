@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks com Jquery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #green {
+            background-color: rgb(4, 17, 1);
+            position: absolute;
+            height: 300px;
+            width: 400px;      
+            border-radius: 20px;            
+            box-shadow: 10px 10px 15px 8px;
+            margin: 20px;
+            
+        }
+
+        #red {
+            background-color: rgb(189, 12, 65);
+            position: absolute;
+            height: 300px;
+            width: 400px;
+            display: none;
+            border-radius: 20px; 
+            box-shadow: 10px 10px 15px 8px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">hide</button>
+    <div id="green"></div>
+    <div id="red"></div>
+        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let green = document.querySelector("#green");
+        let red = document.querySelector("#red");
+        let btn = document.querySelector("#btn");
+
+        function callBack () {
+            // console.log("Green Escondido")
+            $(red).show(2000).hide(2000);
+        }
+
+        $(btn).click(() => {
+            $(green).hide(2000, callBack);
+            
+        })
+
+        // $(btn).click(() => {
+        // $(green).hide(2000);
+        // console.log("Green escondido")
+        // dessa forma não funcionou, por isso o exemplo acima
+        // })
+
+    </script>
+</body>
+</html>
