@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery - Encadeamento / Chaining</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div class="list">
+        <h1>List 1</h1>
+        <ul id="list1">
+            <li class="item1">Element 1</li>
+            <li class="item2">Element 2</li>
+            <li class="item3">Element 3</li>
+            <li class="item4">Element 4</li>
+            <li class="item5">Element 5</li>
+            <li class="item6">Element 6</li>
+        </ul>
+        <h1>List 2</h1>
+        <ul class="list2">
+            <li class="item1">Element 1</li>
+            <li class="item2">Element 2</li>
+            <li class="item3">Element 3</li>
+            <li class="item4">Element 4</li>
+            <li class="item5">Element 5</li>
+            <li class="item6">Element 6</li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    // exemplo com Jquery
+       let jq = $("#list1").slideUp(2000).slideDown(1000).fadeOut(1000);
+
+       console.log(jq);
+
+    //     exemplo em JS:
+
+    let objeto = {
+        printHello: function () {
+            console.log("Hello there!");
+            return this;
+        },
+        printSeeULater: function () {
+            console.log("See you later!");
+            return this;
+        }
+    }
+
+    objeto.printHello().printHello().printSeeULater().printHello();
+
+    //  No exemplo usando JS o objeto retorna ele mesmo "return this", como acontece na maioria das vezes dentro o Jquery o que possibilita o encadeamento/chaining de funções.
+    </script>
+</body>
+</html>
