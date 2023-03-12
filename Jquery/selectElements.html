@@ -40,6 +40,12 @@
         let list2 = $(".list2");
 
         list1.find(".item2").hide();
+        // a função find procura de uma forma mais profunda
+        // para o find() funcionar precisa passar um filtro
+
+        console.log(list2.children().fadeOut(3000));
+        // a children é mais superficial
+        // o children não precisa de filtro para funcionar
     </script>
 </body>
 </html>
