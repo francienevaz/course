@@ -3,7 +3,13 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'client')))
+app.use("meusite", express.static(path.join(__dirname, 'client')))
+
+app.get("/", (req, res) => {
+    // para setar o header  da página // res.set("Content-Type", "text/html")
+    res.type("html");
+    res.send("Hello World from GET");
+})
 
 const PORT = 5000;
 
