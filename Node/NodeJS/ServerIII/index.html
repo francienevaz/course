@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Initial page</title>
+    <title>Teste</title>
 </head>
 <body>
-    <h1>Initial page</h1>
+    <button onclick="get()">GET</button>
+    <button onclick="post()">POST</button>
+    <button onclick="put()">PUT/UPDATE</button>
+    <button onclick="del()">DELETE</button>
+
+    <script>
+        const url = "http://127.0.0.1:3000/teste"
+
+        function get(){
+            fetch(url, {
+                method: "get"
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+        function post(){
+            fetch(url, {
+                method: "post"
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+        function put(){
+            fetch(url, {
+                method: "put"
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+        function del(){
+            fetch(url, {
+                method: "delete"
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+    </script>
 </body>
 </html>

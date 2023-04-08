@@ -6,9 +6,9 @@ function handleFile(req, res, callback){
 
     let path = url.parse(req.url).pathname;    
 
-    // if (path == "" || path == "/") {
-    //     path = "/index.html"
-    // }
+    if (path == "" || path == "/") {
+        path = "/index.html"
+    }
     let fileName = "." + path;
 
     fs.readFile(fileName, (err, data) => {
@@ -33,6 +33,12 @@ function handleRequest (req, res) {
 
     let method = req.method;
     console.log(method);
+
+    if (method == "PUT") {
+        res.writeHead(404, {
+            "Content-Type": "text/html; charset=utf-8"
+        })
+    }
 
     if (path == "/teste") {
         res.end("Teste");
