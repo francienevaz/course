@@ -1,0 +1,9 @@
+:root {
+    --blue: rgb(204, 93, 93);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
