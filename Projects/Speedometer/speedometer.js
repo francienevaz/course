@@ -3,6 +3,7 @@ const btnStart = document.querySelector('#start');
 const btnStop = document.querySelector('#stop');
 
 let watchID = null;
+let currentRide = null;
 
 btnStart.addEventListener("click", () => {
     if (watchID) 
@@ -18,6 +19,8 @@ btnStart.addEventListener("click", () => {
 
     const options = {enableHoghAccurancy: true}
     watchID = navigator.geolocation.watchPosition(handleSuccess, handleError, options)
+
+    currentRide = createNewRide()
 
     btnStart.classList.add("d-none")
     btnStop.classList.remove("d-none")
