@@ -8,7 +8,8 @@ let currentRide = null;
 btnStart.addEventListener("click", () => {
     if (watchID) 
         return
-    function handleSuccess (position){
+    function handleSuccess (position){  
+        addPosition(currentRide, position)
         console.log(position)
         speedElement.innerText = position.coords.speed ? (position.coords.speed * 3.6 ).toFixed(1): 0;
     }
@@ -18,9 +19,8 @@ btnStart.addEventListener("click", () => {
     }
 
     const options = {enableHoghAccurancy: true}
-    watchID = navigator.geolocation.watchPosition(handleSuccess, handleError, options)
-
     currentRide = createNewRide()
+    watchID = navigator.geolocation.watchPosition(handleSuccess, handleError, options)    
 
     btnStart.classList.add("d-none")
     btnStop.classList.remove("d-none")
