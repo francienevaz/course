@@ -1,11 +1,11 @@
 function createNewRide() {
-    const rideID = new Date.now()
+    const rideID = Date.now()
     const rideRecord = {
         data: [],
         startTime: rideID,
         stopTime: null
     }
-    localStorage.setItem(rideID, rideRecord)
+    saveRideRecord(rideID, rideRecord)
     return rideID
 }
 
@@ -30,5 +30,11 @@ function addPosition (rideID, position) {
         timestamp: position.timestamp
     }
     rideRecord.data.push(newData)
+    saveRideRecord(rideID, rideRecord)
+}
+
+function updateStopTime(rideID){
+    const rideRecord = getRideRecord(rideID)
+    rideRecord.stopTime = Date.now()
     saveRideRecord(rideID, rideRecord)
 }
