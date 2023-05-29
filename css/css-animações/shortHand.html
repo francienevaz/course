@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Hand</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        background-color: rgb(82, 43, 43);
+        margin: 50px;        
+    }
+    
+    .animation { 
+        position: relative;
+        background-color: pink;       
+        width: 200px;
+        height: 200px;
+        border: solid 5px white;
+        animation: changeColor 5s ease-in-out infinite alternate;
+        /* digitando an + TAB = animation: name duration timing-function delay iteration-count direction fill-mode;*/
+    }
+
+    /* @keyframes move {
+        0% {left: 0px;}
+        100% {left: 300px;}
+    } */
+
+    .div1 {
+        animation-timing-function: linear;
+    }
+
+    .div2 {
+        animation-timing-function: ease;
+    }
+
+    .div3 {
+        animation-timing-function: ease-in;
+    }
+
+    .div4 {
+        animation-timing-function: ease-out;
+    }
+
+    .div5 {
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes changeColor {
+        0% {
+            background-color: rgb(247, 99, 99);
+        }
+        25% {
+            background-color: rgb(243, 230, 47);
+        }
+        50% {
+            background-color: rgb(6, 85, 150); width: 400px;
+        }
+        100% {
+            background-color: rgb(4, 49, 28);
+        }
+    }
+</style>
+<body>
+    <div class="animation div1">Linear</div>
+    <div class="animation div2">Ease</div>
+    <div class="animation div3">Ease-in</div>
+    <div class="animation div4">Ease-out</div>
+    <div class="animation div5">Ease-in-out</div>
+</body>
+</html>
