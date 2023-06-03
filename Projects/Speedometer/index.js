@@ -1,4 +1,4 @@
-const rideListElemt = document.querySelector("#rideList")
+const rideListElement = document.querySelector("#rideList")
 const allRides = getAllRides()
 
 allRides.forEach(async ([id, value]) => {
@@ -8,10 +8,10 @@ allRides.forEach(async ([id, value]) => {
 	console.log(ride)
 
 	const firstPosition = ride.data[0]
-	console.log(await getLocationData(firstPosition.latitude, firstPosition.longitude));
+	const firstLocationData = await getLocationData(firstPosition.latitude, firstPosition.longitude);
 	const itemElement = document.createElement("li")
 	itemElement.id = ride.id
-	// itemElement.innerText = ride.id
+	itemElement.innerText = `${firstLocationData.city}-${firstLocationData.countryCode}`
 	rideListElement.appendChild(itemElement)
 })
 
