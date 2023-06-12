@@ -9,3 +9,8 @@
     background-color: var(--blue);
     border-color: var(--blue);
 }
+
+#mapDetail {
+    height: 300px;
+    background-color: #ccc;
+}
