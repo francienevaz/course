@@ -37,4 +37,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.querySelector("#data").appendChild(dataElement)
 
+    const map = L.map("mapDetail")
+    map.setView([firstPosition.latitude, firstPosition.longitude], 13)
+    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.{ext}', {
+	subdomains: 'abcd',
+	minZoom: 5,
+	maxZoom: 15,
+	ext: 'png'
+}).addTo(map)
+
+const positionsArray = ride.data.map((position => {
+	return [position.latitude, position.longitude]
+}))
+
+const polyline = L.polyline(positionsArray, {color: "#f00"})  
+polyline.addTo(map)
+
+map.fitBounds(polyline.getBounds())
+
 })
+
+//'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
