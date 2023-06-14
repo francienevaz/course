@@ -44,17 +44,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 	minZoom: 5,
 	maxZoom: 15,
 	ext: 'png'
-}).addTo(map)
+	}).addTo(map)
 
-const positionsArray = ride.data.map((position => {
+	const positionsArray = ride.data.map((position => {
 	return [position.latitude, position.longitude]
-}))
+	}))
 
-const polyline = L.polyline(positionsArray, {color: "#f00"})  
-polyline.addTo(map)
+	const polyline = L.polyline(positionsArray, {color: "#f00"})  
+	polyline.addTo(map)
 
-map.fitBounds(polyline.getBounds())
+	map.fitBounds(polyline.getBounds())
 
-})
+	})
 
-//'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+	//'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
