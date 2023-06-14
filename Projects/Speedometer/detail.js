@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const map = L.map("mapDetail")
     map.setView([firstPosition.latitude, firstPosition.longitude], 13)
-    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.{ext}', {
+    L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
 	subdomains: 'abcd',
 	minZoom: 5,
 	maxZoom: 15,
