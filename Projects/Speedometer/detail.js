@@ -57,4 +57,4 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 	})
 
-	//'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+	// Para mudar o estilo do mapa https://leaflet-extras.github.io/leaflet-providers/preview/
