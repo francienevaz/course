@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery - Manipulate</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div class="list">
+        <h1>List 1</h1>
+        <input type="text" name="new" id="new" value="Novo Element">
+        <ul id="list1">
+            <li class="item1">Element 1</li>
+            <li class="item2">Element 2</li>
+            <li class="item3">Element 3</li>
+            <li class="item4">Element 4</li>
+            <li class="item5">Element 5</li>
+            <li class="item6">Element 6</li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // A função abaixo seta o atributo name para todas as li, de forma que nenhum fique com o mesmo nome
+        $("li").attr("name", (i, oValue) => {
+            return oValue + i
+        })
+
+        // Essa função seta o tamanho máximo do valor do input
+        $("input").attr("maxlength", 10)
+
+        setTimeout(() => {
+            let h1 = $("h1");
+            h1.text("Changing h1...");
+        }, 5000);       
+
+    </script>
+</body>
+</html>
