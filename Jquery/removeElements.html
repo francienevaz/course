@@ -50,10 +50,17 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        // $("#lista1").remove()
-        // $("#lista1").empty() - deixa vazio
-        $(li).remove(".item2, item4")
+        // $("#list1").remove()
+        // $("#list1").empty() - deixa vazio
+        let classItem = $("li")
+        let li2 = $("#list2").find("[key = 2]")
+        let changeColorBg = $(".list")
 
+        setTimeout(() => {
+            changeColorBg.toggleClass("background")
+            classItem.toggleClass("itemGradient")
+            classItem.remove("[key = 2], [key = 4]")
+        }, 5000);
     </script>
 </body>
 </html>
