@@ -12,7 +12,7 @@
     </style>
     <div class="list">
         <h1>List 1</h1>
-        <input type="text" name="new" id="new" value="Novo Element">
+        <input type="text" name="new" id="new">
         <ul id="list1">
             <li class="item1">Element 1</li>
             <li class="item2">Element 2</li>
@@ -31,7 +31,9 @@
         })
 
         // Essa função seta o tamanho máximo do valor do input
-        $("input").attr("maxlength", 10)
+        let maxLength = $("input").attr("maxlength", 10)
+        maxLength.attr("type", "password")
+        // No exemplo acima o tipo do input foi modificado para password
 
         setTimeout(() => {
             let h1 = $("h1");
