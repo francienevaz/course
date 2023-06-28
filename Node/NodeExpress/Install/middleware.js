@@ -1,10 +1,13 @@
 let express = require('express');
 let app = express();
 
-let consoleMethod = (req, res, next) => {
-    console.log(req.method);
+
+//Uma das características do Middleware é que ele tem como parâmetro a requisição, a resposta e o next... o next quando passado um parâmetro retorna uma mensagem de erro, definida pelo programador
+let consoleBody = (req, res, next) => {
+    console.log(req.body);
     next()
 }
+// ☝🏻☝🏻 exemplo de middleware
 
 let hello = (req, res) => {
     res.send("hello world");
