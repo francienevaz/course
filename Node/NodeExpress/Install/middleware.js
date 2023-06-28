@@ -10,6 +10,7 @@ let hello = (req, res) => {
     res.send("hello world");
 }
 
+app.use("/", consoleMethod) // o use responde a qualquer tipo de método (get, post, delete, update)
 app.get("/", hello)
 app.post("/", hello)
 
