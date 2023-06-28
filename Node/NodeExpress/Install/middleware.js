@@ -21,3 +21,4 @@ app.post("/", hello)
 
 app.listen(3000, () => console.log("Server rodando na porta 3000..."))
 
+//Nota: ​Atualmente o express tem "o seu próprio body-parser". Então você não precisa mais instalar/importar o body-parser e pode usar express.urlencoded() e express.json() no lugar de bodyParser.urlencoded() e bodyParse.json() 
