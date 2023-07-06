@@ -29,6 +29,11 @@ app.get("/aluno", (req, res) => {
     res.json(aluno);
 })
 
+app.get("/aluno/:id", (req, res) => {
+    console.log(req.params.id) // Só é possível por que estamos usando o bodyParser
+    let aluno = alunos[req.params.id]
+    res.json(aluno);
+})
 
 app.listen(3000, () => console.log("Server rodando na porta 3000..."))
 
