@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-let bodyParser = require('body-parser');
+// let bodyParser = require('body-parser');
 
 
 let alunos = [
@@ -15,7 +15,7 @@ let hello = (req, res) => {
 }
 
 
-app.use(bodyParser.urlencoded())
+app.use(express.urlencoded())
 // urlencoded serve para ler dados enviados por formulários, senhas, emails, etc
 
 // Rotas 👇🏻👇🏻
