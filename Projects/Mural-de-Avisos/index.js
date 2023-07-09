@@ -1,36 +1,15 @@
 const PORT = 3000;
 const express = require('express');
+const apiRoute = require("./routes/api")
+const path = require("path")
 
 const app = express();
 
-let posts = [
-    {
-        id: "dfjknkkjfg",
-        title: "Teste do Mural",
-        description: "Descrição teste"
-    }
-]
+// Para garantir que uma chamada a api não busque por uma pasta chamada api, devemos chamar a rota da api primeiro.
+app.use("/api", apiRoute);// essa linha deve ser chamada primeiro
+app.use(express.static(path.join(__dirname, "public"))); // é assim que se integra o front com o back 😁😁, usando rotas, fazendo a requisição do path que já é um modulo do node.
 
-app.get("/all", (req, res) => {
-
-    res.json(JSON.stringify(posts))
-
-})
-
-app.post("/new", express.json(), (req, res) => {
-    let id = generateID();
-    let title = req.body.title;
-    let description = req.body.description;
-
-    posts.push({id, title, description});
-
-    res.send("Post adicinado");
-})
 
 app.listen(PORT, () => {
     console.log("Server running on port", PORT)
 })
-
-function generateID() {
-    return Math.random().toString(36).substring(2,9)
-}
