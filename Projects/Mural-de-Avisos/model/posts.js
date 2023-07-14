@@ -19,4 +19,5 @@ module.exports = {
 
 function generateID() {
     return Math.random().toString(36).substring(2,9);
+    // no método toString(36) retorna números e letras do random. E o substring limita a quantidade de caracters
 }
