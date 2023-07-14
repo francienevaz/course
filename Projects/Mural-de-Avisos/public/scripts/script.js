@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updatePosts() {
     // o método fetch pega os dados do backend, "api" para conseguirmos passar os dados para o frontend
-    fetch("http://localhost:3000/api/all").then(res => {
+    fetch("http://192.168.1.100:3000/api/all").then(res => {
         return res.json()
     }).then( json => {
         let postElements = "";
@@ -42,7 +42,7 @@ function newPost() {
         body: JSON.stringify(post)
     }
 
-    fetch("http://localhost:3000/api/new", options).then(res => {
+    fetch("http://192.168.1.100:3000/api/new", options).then(res => {
         console.log(res);
         updatePosts();
         document.getElementById("title").value = "";
