@@ -13,6 +13,6 @@
     "sharp": "^0.32.0"
   },
   "devDependencies": {
-    "compress-images": "^1.9.9"
+    "compress-images": "^2.0.5"
   }
 }
