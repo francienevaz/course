@@ -6,15 +6,18 @@ const path = require('path');
 const app = express();
 
 let users = [
-    {
+    {   
+        id: 0,
         name: "Johnny Deep", 
         phone: "(333) 21548758"
     },
     {
+        id: 1,
         name: "Lisa Wood", 
         phone: "(333) 21548758"
     },
-    {
+    {   
+        id: 2,
         name: "Wesnesday Adams", 
         phone: "(333) 21548758"
     }

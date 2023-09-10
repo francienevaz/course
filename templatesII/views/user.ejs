@@ -6,10 +6,15 @@
     <title>Usuário</title>
 </head>
 <body>
+    <%# Abaixo fazemos um for para pegar os usuários de users e imprimir usando uma condição if para mmostrar
+    somente os ids que forem par
+    %>
 
     <% for (let user of users) {%>
+        <% if(user.id % 2 == 0){%>
         <h1> <%=user.name%> </h1>
         <h4> <%=user.phone%> </h4>
+        <%}%>
     <%}%>
     
     
