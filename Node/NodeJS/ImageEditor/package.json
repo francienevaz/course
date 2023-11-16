@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "pngquant-bin": "^8.0.1",
-    "sharp": "^0.32.0"
+    "sharp": "^0.32.6"
   },
   "devDependencies": {
     "compress-images": "^2.0.5"
