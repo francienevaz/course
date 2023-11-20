@@ -1,7 +1,7 @@
 // O node express é um framework que serve para usarmos as rotas no nosso projeto, fazer as requisições com get/post/upgrade/delete
 
 const express = require('express');
-const fs = require('fs');
+// const fs = require('fs');
 const path = require('path');
 const app = express();
 
@@ -32,10 +32,8 @@ app.get("/", (req, res) => {
 
 });
 
-app.get("./about", (req, res) => {
-
-    res.render("about");
-
+app.get("/aboutII", (req, res) => {
+    res.render(path.join(__dirname, 'views', 'aboutII')); // Caminho absoluto para o arquivo about.ejs
 });
 
 app.listen(3000, () => {
