@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/aboutII", (req, res) => {
-    res.render(path.join(__dirname, 'views', 'aboutII')); // Caminho absoluto para o arquivo about.ejs
+    res.render('about');
 });
 
 app.listen(3000, () => {
