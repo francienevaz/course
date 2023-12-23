@@ -5,9 +5,7 @@ const mongoose = require('mongoose')
 
   mongoose.connect('mongodb://localhost:27017')
   .then(() => console.log("Conectado a MongoDB"))
-  .catch((error)=>{
-    console.error('Erro ao conectar ao MongoDB:', error);
-  })
+  .catch((error)=> console.error('Erro ao conectar ao MongoDB:', error))
 
 //{
 //   useNewUrlParser: true,
