@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery - Encadeamento / Chaining</title>
+</head>
+<body>
+    <style>
+        .item {
+            background-color: rgb(24, 24, 18);
+            color: white;
+            height: 20px;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 15px;
+        }
+        
+        .itemGradient {
+            background: linear-gradient(90deg, rgba(250,82,82,1) 0%, rgb(104, 3, 33) 100%);
+        }
+
+        .background {
+            background: linear-gradient(90deg, rgb(20, 18, 18) 0%, rgb(5, 94, 146) 100%);
+            color: white;
+            padding: 20px;
+        }
+    </style>
+    <div class="list">
+        <h1>List 1</h1>
+        <input type="text" name="new" id="new">
+        <ul id="list1">
+            <li key="1" class="item">Element 1</li>
+            <li key="2" class="item">Element 2</li>
+            <li key="3" class="item">Element 3</li>
+            <li key="4" class="item">Element 4</li>
+            <li key="5" class="item">Element 5</li>
+            <li key="6" class="item">Element 6</li>
+        </ul>
+        <ul id="list2">
+            <li key="1" class="item">Element 1</li>
+            <li key="2" class="item">Element 2</li>
+            <li key="3" class="item">Element 3</li>
+            <li key="4" class="item">Element 4</li>
+            <li key="5" class="item">Element 5</li>
+            <li key="6" class="item">Element 6</li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let classItem = $("li")
+        let li2 = $("#list2").find("[key = 2]")
+        let changeColorBg = $(".list")
+
+        setTimeout(() => {
+            changeColorBg.toggleClass("background")
+            classItem.toggleClass("itemGradient")
+            li2.remove()
+        }, 5000);
+
+    </script>
+</body>
+</html>

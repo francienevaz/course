@@ -37,4 +37,31 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.querySelector("#data").appendChild(dataElement)
 
-})
+	const deleteBtn = document.querySelector("#deleteBtn")
+	deleteBtn.addEventListener("click", () => {
+
+		deleteRide(rideID)
+		window.location.href = "./"
+	})
+
+    const map = L.map("mapDetail")
+    map.setView([firstPosition.latitude, firstPosition.longitude], 13)
+    L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
+	subdomains: 'abcd',
+	minZoom: 5,
+	maxZoom: 15,
+	ext: 'png'
+	}).addTo(map)
+
+	const positionsArray = ride.data.map((position => {
+	return [position.latitude, position.longitude]
+	}))
+
+	const polyline = L.polyline(positionsArray, {color: "#f00"})  
+	polyline.addTo(map)
+
+	map.fitBounds(polyline.getBounds())
+
+	})
+
+	// Para mudar o estilo do mapa https://leaflet-extras.github.io/leaflet-providers/preview/

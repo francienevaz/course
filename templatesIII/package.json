@@ -7,7 +7,6 @@
     "firebase": "^9.15.0"
   },
   "devDependencies": {
-    "eslint": "^8.54.0",
     "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1"
   },

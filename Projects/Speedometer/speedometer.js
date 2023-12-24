@@ -36,4 +36,6 @@ btnStop.addEventListener("click", () => {
     currentRide = null
     btnStart.classList.remove("d-none")
     btnStop.classList.add("d-none")
+
+    window.location.href = "./"
 })
