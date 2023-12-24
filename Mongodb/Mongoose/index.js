@@ -3,43 +3,26 @@ const app = express()
 const port = 3000
 const mongoose = require('mongoose')
 
-// const linkSchema = new mongoose.Schema({
-//   title: String,
-//   description: String, 
-//   url: String,
-//   click: Number
-// })
-
-// const Link = mongoose.model('Link', linkSchema)
-
-// let link = new Link({
-//   title: "Fran",
-//   description: 'This is a test for the database',
-//   url: 'http://www.google.com',
-//   click: 0
-// })
-
-// link.save().then(doc => {
-//   console.log(doc)
-// }).catch(error => { 
-//   console.log(error)
-// })
-
-const personSchema = new mongoose.Schema({
-  name: String,
-  age: Number,
+const linkSchema = new mongoose.Schema({
+  title:{ type: String, required: true },
+  description: String, 
+  url: { type: String, required: true },
+  click:{ type: Number, default: 0}
 })
 
-const Person = mongoose.model('Person', personSchema);
+const Link = mongoose.model('Link', linkSchema)
 
-let person = new Person({name: 'Pedro', age: 23});
+let link = new Link({
+  title: "Github",
+  description: 'This is a test for the database',
+  url: 'https://github.com/',
+})
 
-person.save().then(doc => {
-  console.log("Document inserted", doc)
-}).catch(error => {
+link.save().then(doc => {
+  console.log(doc)
+}).catch(error => { 
   console.log(error)
 })
-
 
 mongoose.connect('mongodb://127.0.0.1:27017/newLinks')
 
@@ -49,7 +32,6 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"))
 db.once("open", ()=> {
   console.log("Connected to MongoDB")
 })
-
 
 app.get('/', (req, res) => res.send('Hello World!'))
 app.listen(port, () => console.log('Example app listening on port 3000'))
