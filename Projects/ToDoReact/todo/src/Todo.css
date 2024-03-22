@@ -1,4 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 100px;
+    background: rgb(85, 83, 83);
+}
 .container {
     margin: auto;
-    max-width: 900px;
+    max-width: 600px;
+}
+
+h1 {
+    color: #f7f2f8;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    color: #f7f2f8;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #e698ce;
+    font-size: 24px;
+    background: transparent;
+}
+
+button {
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 10px;
+    height: 50px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    transition: all .3s ease;
+
+}
+.done {
+    text-decoration: line-through;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {   
+    
+    width: 100%;
+    font-size: 30px;
+    padding: 15px;
+    margin-top: 15px;
+    
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e698ce;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
