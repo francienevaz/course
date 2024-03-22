@@ -24,7 +24,7 @@ function TodoForm(props){
 
         <form>
                 <input onChange={handleChange} type="text" value={text}></input>
-                <button onClick={addItem} type="button"><FontAwesomeIcon icon={faPlus} /></button>
+                <button onClick={addItem} type="submit"><FontAwesomeIcon icon={faPlus} /></button>
         </form>
     )
 }

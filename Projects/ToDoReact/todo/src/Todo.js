@@ -31,9 +31,7 @@ function Todo(){
 
     function onItemDeleted(item) {
         
-        let filteredItems = items.filter(it=>it.id != item.id);
-
-        console.log(item.id);
+        let filteredItems = items.filter(it=>it.id !== item.id);
         
         setItems(filteredItems);
     }
@@ -61,4 +59,4 @@ function Todo(){
     )
 }
 
-export default Todo
+export default Todo;
