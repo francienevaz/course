@@ -15,11 +15,20 @@ function Todo(){
          setItems([...items, item])
     }
 
+    function onItemDeleted(item) {
+        
+        let filteredItems = items.filter(it=>it.id != item.id);
+
+        console.log(item.id);
+        
+        setItems(filteredItems);
+    }
+
     return(
         <div className="container">
             <h1>Hello World</h1>
             <TodoForm onAddItem={onAddItem}></TodoForm>
-            <List items={items}></List>
+            <List onItemDeleted={onItemDeleted} items={items}></List>
 
         </div>
     )
