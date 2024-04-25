@@ -29,7 +29,8 @@ function Todo(){
 
         let item = new Item(text);
 
-         setItems([...items, item])
+         setItems([...items, item]);
+         onHideModal();
     }
 
     function onItemDeleted(item) {
@@ -52,15 +53,8 @@ function Todo(){
 
     }
 
-    function onHideModal (e){
-        let target = e.target;
-
-        if(target.id == "modal"){
-            setShowModal(false);
-        }
-
-
-        console.log(target);
+    function onHideModal (){
+        setShowModal(false);
     }
 
     return(
