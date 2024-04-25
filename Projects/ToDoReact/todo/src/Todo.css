@@ -28,7 +28,7 @@ input {
     justify-content: center;
     height: 50px;
     width: 100%;
-    color: #f7f2f8;
+    color: #1f0011;
     outline: none;
     border: none;
     border-bottom: 1px solid #e698ce;
@@ -76,4 +76,40 @@ ul {
     background: #e698ce;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    color: white;
+    background-color: #e698ce;
+    border-radius: 25px;
+}
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.021);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardModal {
+    padding: 20px;
+    background-color: white;
+}
+
+.hide {
+    display: none;
 }
