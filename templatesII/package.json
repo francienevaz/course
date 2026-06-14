@@ -3,8 +3,8 @@
     "@thatcopy/catapi": "^1.0.1",
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
-    "express": "^4.21.1",
-    "firebase": "^12.10.0"
+    "express": "^4.22.1",
+    "firebase": "^10.12.4"
   },
   "devDependencies": {
     "webpack": "^5.76.0",
